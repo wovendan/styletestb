@@ -1,0 +1,44 @@
+<section id="topicshowcase" class="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 text-center">
+        <h2>Topics</h2>
+        <hr class="small">
+        <div class="row">
+     
+
+    {% for t in site.pages %}  
+    {% if t.layout =="topic" %}
+
+          <div class="col-md-3">
+            <div class="portfolio-item">
+              <a href="{{ t.url | prepend: site.baseurl }}">
+                <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+              </a>
+      <a href="{{ t.url | prepend: site.baseurl }}">{{ t.title }}</a>
+<br>
+{{ t.synopsis }}      
+
+
+            </div>
+          </div>
+          {% endif %}
+{% endfor %}
+
+   
+  
+
+
+
+        </div>
+        <!-- /.row (nested) -->
+     
+
+
+      </div>
+      <!-- /.col-lg-10 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
